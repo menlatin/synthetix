@@ -1,14 +1,13 @@
-pragma solidity ^0.5.16;
+pragma solidity ^0.8.0;
 
-import "openzeppelin-solidity-2.3.0/contracts/math/SafeMath.sol";
-import "openzeppelin-solidity-2.3.0/contracts/token/ERC20/ERC20Detailed.sol";
-import "openzeppelin-solidity-2.3.0/contracts/token/ERC20/SafeERC20.sol";
-import "openzeppelin-solidity-2.3.0/contracts/utils/ReentrancyGuard.sol";
+import "https://github.com/menlatin/openzeppelin-contracts/blob/2cf3ac4033e32e4892d596440d11e3b39768f687/contracts/token/ERC20/utils/SafeERC20.sol;
+import "https://github.com/menlatin/openzeppelin-contracts/blob/2cf3ac4033e32e4892d596440d11e3b39768f687/contracts/utils/math/SafeMath.sol";
+import "https://github.com/menlatin/openzeppelin-contracts/blob/5a75065659a65e65bb04890192e3a4bcb7917fff/contracts/security/ReentrancyGuard.sol";
 
 // Inheritance
-import "./interfaces/IStakingRewards.sol";
-import "./RewardsDistributionRecipient.sol";
-import "./Pausable.sol";
+import "https://github.com/menlatin/synthetix/blob/5a0008dbe3da00c7e39eba4c00e438c14afd1455/contracts/interfaces/IStakingRewards.sol";
+import "https://github.com/menlatin/synthetix/blob/82775afd6cd7c36668e606dc95004676381ac6af/contracts/RewardsDistributionRecipient.sol";
+import "https://github.com/menlatin/synthetix/blob/82775afd6cd7c36668e606dc95004676381ac6af/contracts/Pausable.sol";
 
 // https://docs.synthetix.io/contracts/source/contracts/stakingrewards
 contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, ReentrancyGuard, Pausable {
